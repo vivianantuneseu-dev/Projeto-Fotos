@@ -1,42 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!--VERSÃO DO HTML (MAIS MODERNA)-->
 
-<head>
+<html lang="pt-br"> <!-- FICA TODO O SITE -->
+
+<head> <!-- CABEÇA - CONFIGURAÇÕES -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://js.puter.com/v2/"></script>
     <title>GASTO DA FOTO</title>
 </head>
 
-<body>
+<body> <!-- TODA A PARTE VISÍVEL -->
 
     <div>
+
         <h1>📸 Gasto na Foto</h1>
         <p class="topo">Fotografe o comprovante. A IA anota pra você.</p>
+
     </div>
 
     <div class="caixa-total">
+
         <p>Total gasto</p>
         <h2 class="total-gasto">R$ 0,00</h2>
-        <p class="comprovantes-lidos">0 comprovantes lidos</p>
+        
     </div>
 
     <!-- INPUT PARA SELECIONAR IMAGENS -->
-    <label class="label-upload">
+
+    <!-- label -  -->
+    <!-- change - mudar -->
+    <label>
         🧾 Toque para fotografar o comprovante
-        <input onchange="lerFoto(event)" type="file" accept="image/*">
+        <input class="foto" onchange="lerFoto()" type="file" accept="image/*">
     </label>
 
-    <!-- BOTÃO PARA GERAR O RELATÓRIO EM PDF -->
-    <button onclick="gerarRelatorioPDF()" class="btn-pdf">
-        📄 Gerar Relatório Geral em PDF
-    </button>
+    <div class="lista">
 
-    <!-- BIBLIOTECA EXTERNA PARA GERAR PDF (html2pdf.js) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    
-    <!-- NOSSO SCRIPT PRINCIPAL -->
-    <script src="scripts.js"></script>
+    </div>
+
 </body>
+
+<script src="scripts.js"></script>
 
 </html>
